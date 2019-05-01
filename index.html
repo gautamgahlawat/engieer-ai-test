@@ -34,16 +34,37 @@
               alt="brand-logo"
             />
           </div>
-          <div class="social-links flex">
-            <div class="nav-item">
-              <img src="./static/twitter.svg" alt="twitter-icon" />
-            </div>
-            <div class="nav-item">
-              <img src="./static/facebook.svg" alt="facebook-icon" />
-            </div>
-            <div class="nav-item">
-              <img src="./static/insta.svg" alt="insta-icon" />
-            </div>
+          <div class="social-links flex items-start">
+            <a
+              href="#"
+              class="nav-item flex-1 flex justify-center items-center"
+            >
+              <img
+                class="img-responsive"
+                src="./static/twitter-icon.png"
+                alt="twitter-icon"
+              />
+            </a>
+            <a
+              href="#"
+              class="nav-item flex-1 flex justify-center items-center"
+            >
+              <img
+                class="img-responsive"
+                src="./static/fb-icon.png"
+                alt="facebook-icon"
+              />
+            </a>
+            <a
+              href="#"
+              class="nav-item flex-1 flex justify-center items-center"
+            >
+              <img
+                class="img-responsive"
+                src="./static/insta-icon.png"
+                alt="insta-icon"
+              />
+            </a>
           </div>
         </div>
       </nav>
@@ -51,10 +72,31 @@
 
     <!-- sections -->
     <section class="section-container first-section">
-      <h1 class="text-center main-head-text">It's your body. It matters.</h1>
-      <a class="text-center" href="mailto:abc@email.com"
-        >Let me know, when you launch</a
-      >
+      <div class="flex justify-center items-center flex-col">
+        <h1 class="text-center main-head-text">It's your body. It matters.</h1>
+        <div class="let-me-know flex items-center">
+          <span>
+            Let me know when you launch
+          </span>
+          <img class="img-responsive" src="./static/arrow-icon.png" alt="" />
+        </div>
+      </div>
+
+      <div class="first-section-bottom-container">
+        <p class="text-white text-center">
+          Are you a <span>snappy writer</span>,
+          <span>business looking for corporate wellness</span> , or a
+          <span>brand trying to target health conscious indians</span>?
+        </p>
+        <div class="img-container flex justify-center items-center">
+          <img
+            class="img-responsive down-arrow"
+            src="./static/down-arrow.png"
+            alt=""
+            onclick="scrollDown()"
+          />
+        </div>
+      </div>
     </section>
 
     <!-- 2nd section -->
@@ -69,7 +111,14 @@
         <div
           class="right-section small background-primary flex justify-center items-start flex-col"
         >
-          <p class="text-white">
+          <div class="img-container flex justify-center w-100">
+            <img
+              class="img-responsive user-img"
+              src="./static/user-edit.png"
+              alt=""
+            />
+          </div>
+          <p class="text-white main-paragraph">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum ipsa
             assumenda voluptates dicta dignissimos. Delectus cum tempora,
             ratione itaque officia deleniti sint deserunt aliquid autem ut
@@ -96,13 +145,20 @@
         >
           <p class="text-primary">Are you a...</p>
           <p class="text-white text-center snappy-writter">
-            Snappy writter who can make editing celery sound like fun ?
+            Business looking to bring some health and welness into your teams?
           </p>
         </div>
         <div
           class="left-section small text-white background-primary flex justify-center items-start flex-col"
         >
-          <p class="text-white">
+          <div class="img-container flex justify-center w-100">
+            <img
+              class="img-responsive user-img"
+              src="./static/users-icon.png"
+              alt=""
+            />
+          </div>
+          <p class="text-white main-paragraph">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum ipsa
             assumenda voluptates dicta dignissimos. Delectus cum tempora,
             ratione itaque officia deleniti sint deserunt aliquid autem ut
@@ -121,7 +177,7 @@
       </div>
     </section>
 
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="./index.js" async defer></script>
   </body>
 </html>
