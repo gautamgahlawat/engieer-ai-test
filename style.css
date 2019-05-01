@@ -1,4 +1,213 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
+  height: 100%;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04rem;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.text-primary {
+  color: #a0cf32;
+}
+
+.background-primary {
+  background: #a0cf32;
+}
+
+section {
+  margin: 0;
+}
+
+.btn-container {
+  width: 100%;
+}
+
+.btn-primary {
+  background: transparent;
+  border: 1px solid #fff;
+  border-radius: 6px;
+  padding: 5px 10px;
+  color: white;
+  font-size: 18px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+/* .........common-classes......... */
+.text-center {
+  text-align: center;
+}
+
+.img-responsive {
+  width: 100%;
+  max-height: 100%;
+}
+
+/* display */
+.flex {
+  display: flex;
+}
+
+/* direction */
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-row-reverse {
+  flex-direction: row-reverse;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-col-reverse {
+  flex-direction: column-reverse;
+}
+
+.flex-1 {
+  flex: 1 1 0%;
+}
+
+/* wrap */
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+/* align-items */
+.items-start {
+  align-items: flex-start;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.items-end {
+  align-items: flex-end;
+}
+
+/* justify */
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.nav-bar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 100;
+  background: blue;
+  padding: 20px;
+  opacity: 0.3;
+}
+.nav-container {
+  display: flex;
+}
+
+.social-links {
+  display: flex;
+}
+
+.brand-logo-container .brand-logo {
+  height: 40px;
+  width: auto;
+}
+
+section.section-container {
+  height: 100vh;
+}
+
+.first-section {
+  background-image: url(./static/main-header-banner.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+.first-section .main-head-text {
+  color: #fff;
+  font-size: 48px;
+}
+
+.second-section .content-holder {
+  height: 100%;
+}
+
+.second-section .content-holder .left-section {
+  width: 70%;
+  background-image: url(./static/2-banner.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.second-section .content-holder .left-section p {
+  font-size: 32px;
+}
+.content-holder .left-section .snappy-writter,
+.content-holder .right-section .snappy-writter {
+  max-width: 500px;
+}
+.second-section .content-holder .right-section {
+  width: 30%;
+  padding: 40px;
+}
+
+.third-section .content-holder {
+  height: 100%;
+}
+
+.third-section .content-holder .left-section.small {
+  width: 30%;
+  padding: 40px;
+}
+.third-section .content-holder .right-section.big {
+  width: 70%;
+  background-image: url(./static/last-img.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.third-section .content-holder .right-section p {
+  font-size: 32px;
 }
