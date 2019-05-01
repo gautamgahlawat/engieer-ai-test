@@ -3,7 +3,7 @@ let reCalculate = true;
 window.addEventListener(
   "wheel",
   function(e) {
-    console.log("run");
+    // console.log("run");
     document.body.style.overflow = "hidden";
     if (reCalculate) {
       if (e.deltaY > 0) {
@@ -19,7 +19,7 @@ window.addEventListener(
     }
 
     timer = window.setTimeout(function() {
-      console.log("scroll stopped");
+      // console.log("scroll stopped");
       reCalculate = true;
       document.body.style.overflow = "scroll";
     }, 60);
