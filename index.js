@@ -1,21 +1,18 @@
 var timer;
-var lastScrollTop = 0;
-var lastSectionTop = 0;
 let reCalculate = true;
-let start = 0;
-let end = 0;
-let distance = 0;
-let direction_top = true;
-const threshold = 100;
 window.addEventListener(
   "wheel",
-  function() {
+  function(e) {
+    console.log("run");
+    document.body.style.overflow = "hidden";
     if (reCalculate) {
-      start = window.scrollY;
+      if (e.deltaY > 0) {
+        window.scrollBy({ top: window.innerHeight, behavior: "smooth" });
+      } else {
+        window.scrollBy({ top: -window.innerHeight, behavior: "smooth" });
+      }
       reCalculate = false;
     }
-
-    console.log("start" + start);
 
     if (timer) {
       window.clearTimeout(timer);
@@ -24,36 +21,15 @@ window.addEventListener(
     timer = window.setTimeout(function() {
       console.log("scroll stopped");
       reCalculate = true;
-      end = window.scrollY;
-      distance = end - start;
-      console.log("dist" + distance);
-      if (distance < 0) {
-        direction_top = true;
-      } else direction_top = false;
-      distance = Math.abs(distance);
-      console.log("abs dist" + distance);
-      if (distance < threshold && !direction_top) {
-        window.scrollBy({ top: -distance, behavior: "smooth" });
-      } else if (distance > threshold && !direction_top) {
-        window.scrollBy({
-          top: window.innerHeight - distance,
-          behavior: "smooth"
-        });
-      } else if (distance < threshold && direction_top) {
-        window.scrollBy({ top: distance, behavior: "smooth" });
-      } else if (distance > threshold && direction_top) {
-        window.scrollBy({
-          top: -(window.innerHeight - distance),
-          behavior: "smooth"
-        });
-      }
+      document.body.style.overflow = "scroll";
     }, 60);
   },
   false
 );
 
 $(document).ready(function() {
+  var firstSectionHeight = $(".first-section").innerHeight();
   $(".first-section .down-arrow").click(function() {
-    $("html, body").animate({ scrollTop: 800 }, "slow");
+    $("html, body").animate({ scrollTop: firstSectionHeight }, "slow");
   });
 });
